@@ -141,67 +141,63 @@ end;
 readln;  
 end;  
 
-procedure vyvod1;
-begin
-assignfile(f1,'E:\delphi\1.txt');
-rewrite(f1);
-for i := 1 to 4 do
-begin
-e1:= floattostr(int(chel[i].zp));
-e2:= floattostr(frac(chel[i].zp));
-delete(e2,1,1);
-e0:=e1+e2;
-writeln(f1, chel[i].name,' ', chel[i].age,' ',e0);
-end;
-closefile(f1);
-end;
+procedure vyvod1;  
+begin  
+assignfile(f1,'E:\delphi\1.txt');  
+rewrite(f1);  
+for i := 1 to 4 do  
+begin  
+e1:= floattostr(int(chel[i].zp));  
+e2:= floattostr(frac(chel[i].zp));  
+delete(e2,1,1);  
+e0:=e1+e2;  
+writeln(f1, chel[i].name,' ', chel[i].age,' ',e0);  
+end;  
+closefile(f1);  
+end;  
 
-procedure vyvod2;
-begin
-assignfile(f2,'E:\delphi\2.txt');
-rewrite(f2);
-for p := 1 to 4 do
-begin
-e1:= floattostr(int(chel[p].zp));
-e2:= floattostr(frac(chel[p].zp));
-delete(e2,1,1);
-e0:=e1+e2;
-writeln(f2,chel[p].name,' ', chel[p].age,' ',e0);
-end;
-closefile(f2);
-end;
+procedure vyvod2;  
+begin  
+assignfile(f2,'E:\delphi\2.txt');  
+rewrite(f2);  
+for p := 1 to 4 do  
+begin  
+e1:= floattostr(int(chel[p].zp));  
+e2:= floattostr(frac(chel[p].zp));  
+delete(e2,1,1);  
+e0:=e1+e2;  
+writeln(f2,chel[p].name,' ', chel[p].age,' ',e0);  
+end;  
+closefile(f2);  
+end;  
 
-procedure vyvod3;
-begin
-assignfile(f3,'E:\delphi\3.txt');
-rewrite(f3);
-for i1 := 1 to 4 do
-begin
-e1:= floattostr(int(chel[i1].zp));
-e2:= floattostr(frac(chel[i1].zp));
-delete(e2,1,1);
-e0:=e1+e2;
-writeln(f3, chel[i1].name,' ', chel[i1].age,' ',e0);
-end;
-closefile(f3);
-end;
-begin
-writeln('Правила:');
-writeln('~{Кол-во сотрудников: 4}~');
-writeln('~{Сотрудники этой организации не должны зарабатывать больше 9999,99}~');
-vvod;
-sort1;
-vyvod1;
-sort2(1,2);
-vyvod2;
-sort3;
-vyvod3;
-readln;
-readln;
-<<<<<<< Updated upstream
-end.
-Уровень английского очень низкий. Есть жедание подтянуть его во врнемя курсов. 
-=======
-end."
+procedure vyvod3;  
+begin  
+assignfile(f3,'E:\delphi\3.txt');  
+rewrite(f3);  
+for i1 := 1 to 4 do  
+begin  
+e1:= floattostr(int(chel[i1].zp));  
+e2:= floattostr(frac(chel[i1].zp));  
+delete(e2,1,1);  
+e0:=e1+e2;  
+writeln(f3, chel[i1].name,' ', chel[i1].age,' ',e0);  
+end;  
+closefile(f3);  
+end;  
+begin  
+writeln('Правила:');  
+writeln('~{Кол-во сотрудников: 4}~');  
+writeln('~{Сотрудники этой организации не должны зарабатывать больше 9999,99}~');  
+vvod;  
+sort1;  
+vyvod1;  
+sort2(1,2);  
+vyvod2;  
+sort3;  
+vyvod3;  
+readln;  
+readln;  
+end.  
 </html>
->>>>>>> Stashed changes
+
